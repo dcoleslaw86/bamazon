@@ -16,12 +16,14 @@ var connection = mysql.createConnection({
   database: "bamazon_db"
 });
 
-connection.connect((err) => {
-    if (err) throw err;
-    listProducts();
-  })
-  
-  function listProducts() {
+connection.connect(function (err) {
+    if (err) {
+        console.error("error connecting: " + err.stack);
+    }
+    showProducts();
+});
+
+function showProducts() {
     console.log("Listing all available products...\n");
   
     connection.query("SELECT * FROM products",
@@ -32,7 +34,7 @@ connection.connect((err) => {
   
       for (let i = 0; i < res.length; i++) {
         console.log("Id: " + res[i].item_id);
-        console.log("Product Name: " + res[i].product_name);
+        console.log("Product: " + res[i].products);
         console.log("Department: " + res[i].department_name);
         console.log("Price: $" + res[i].price);
         console.log("# in Stock: " + res[i].stock_quantity);
@@ -111,4 +113,3 @@ connection.connect((err) => {
         }
       })
   }
-

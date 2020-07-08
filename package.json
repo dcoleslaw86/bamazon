@@ -16,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/dcoleslaw86/bamazon/issues"
   },
-  "homepage": "https://github.com/dcoleslaw86/bamazon#readme"
+  "homepage": "https://github.com/dcoleslaw86/bamazon#readme",
+  "dependencies": {
+    "console.table": "^0.10.0",
+    "inquirer": "^7.3.0",
+    "mysql": "^2.18.1"
+  }
 }
