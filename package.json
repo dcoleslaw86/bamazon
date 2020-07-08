@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/dcoleslaw86/bamazon#readme",
   "dependencies": {
+    "cli-table2": "^0.2.0",
     "console.table": "^0.10.0",
     "inquirer": "^7.3.0",
     "mysql": "^2.18.1"
