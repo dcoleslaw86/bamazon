@@ -23,12 +23,12 @@ var display = function(){
         if(err) throw err;
     
     var table = new Table({
-        head: ["ID", "Product", "Unit Cost"],
+        head: ["ID", "Product", "Unit Cost", "Qty."],
         colWidths: [10, 25, 15],
-        colAligns: ["center", "center", "right"],
+        colAligns: ["center", "center", "right", "center"],
     });
     for(var i = 0; i < res.length; i++){
-        table.push([res[i].id, res[i].products, res[i].price]);
+        table.push([res[i].id, res[i].products, res[i].price, res[i].stock_quantity]);
     }
     console.log(table.toString());
     console.log("");
